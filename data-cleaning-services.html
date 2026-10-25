@@ -18,11 +18,19 @@
     <link rel="canonical"
           href="https://dstasolutions.com/data-cleaning-services.html">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <meta property="og:title"
           content="Data Cleaning: Why Clean Data Matters | DSTA Solutions">
 
     <meta property="og:description"
-          content="Discover how better data quality can support more reliable business reporting and smarter decisions.">
+          content="Discover how better data quality can support reliable business reporting and smarter decisions.">
 
     <meta property="og:url"
           content="https://dstasolutions.com/data-cleaning-services.html">
@@ -33,370 +41,58 @@
           content="https://dstasolutions.com/images/logo.png">
 
     <style>
-        :root {
-            --navy: #071b2b;
-            --navy-light: #102b40;
-            --teal: #13c5c1;
-            --cyan: #46c7f4;
-            --pink: #e85ca8;
-            --text: #263746;
-            --muted: #657585;
-            --background: #f5f8fb;
-            --white: #ffffff;
-            --border: #e2eaf0;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 25px;
+            scroll-padding-top: 100px;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: var(--text);
-            background: var(--background);
-            line-height: 1.75;
+            font-family: 'Poppins', sans-serif;
         }
 
-        a {
-            color: inherit;
+        .article-content h2 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #172b45;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
         }
 
-        .top-bar {
-            height: 5px;
-            background: linear-gradient(
-                90deg,
-                var(--teal),
-                var(--cyan),
-                var(--pink)
-            );
+        .article-content p {
+            color: #4b5563;
+            line-height: 1.9;
+            margin-bottom: 1.2rem;
         }
 
-        header {
-            background: var(--navy);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        .article-content ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            margin: 1rem 0 1.5rem;
+            color: #4b5563;
         }
 
-        .navbar {
-            max-width: 1120px;
-            margin: auto;
-            padding: 16px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 22px;
+        .article-content li {
+            margin-bottom: 0.7rem;
+            line-height: 1.8;
         }
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            flex-shrink: 0;
+        .article-content a {
+            color: #0891b2;
         }
 
-        .brand img {
-            width: 58px;
-            height: 58px;
-            object-fit: contain;
-        }
-
-        .brand-text strong {
-            display: block;
-            color: var(--white);
-            font-size: 24px;
-            letter-spacing: 1.5px;
-            line-height: 1.2;
-        }
-
-        .brand-text span {
-            display: block;
-            color: var(--teal);
-            font-size: 11px;
-            letter-spacing: 3px;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 22px;
-        }
-
-        .nav-links a {
-            color: #e2edf5;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--teal);
-        }
-
-        .hero {
-            background:
-                radial-gradient(
-                    circle at 90% 15%,
-                    rgba(19, 197, 193, 0.16),
-                    transparent 32%
-                ),
-                var(--navy);
-            color: var(--white);
-            padding: 72px 24px 68px;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .eyebrow {
-            display: inline-block;
-            color: var(--teal);
-            text-transform: uppercase;
-            font-size: 12px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin-bottom: 16px;
-        }
-
-        .hero h1 {
-            max-width: 820px;
-            font-size: clamp(32px, 5vw, 48px);
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            max-width: 760px;
-            color: #d0dce6;
-            font-size: 17px;
-        }
-
-        .article-meta {
-            margin-top: 24px;
-            color: #aebfce;
-            font-size: 13px;
-        }
-
-        .page-layout {
-            max-width: 1120px;
-            margin: 42px auto;
-            padding: 0 24px;
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) 280px;
-            gap: 28px;
-            align-items: start;
-        }
-
-        article,
-        .sidebar-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-        }
-
-        article {
-            padding: 38px;
-            min-width: 0;
-        }
-
-        article h2 {
-            color: var(--navy);
-            font-size: 25px;
-            line-height: 1.35;
-            margin: 34px 0 13px;
-        }
-
-        article h2:first-child {
-            margin-top: 0;
-        }
-
-        article p {
-            margin-bottom: 17px;
-        }
-
-        article ul {
-            padding-left: 23px;
-            margin: 12px 0 20px;
-        }
-
-        article li {
-            margin-bottom: 9px;
-        }
-
-        .table-of-contents {
-            background: #f0f9fa;
-            border-left: 4px solid var(--teal);
-            padding: 20px 24px;
-            border-radius: 8px;
-            margin-bottom: 32px;
-        }
-
-        .table-of-contents h2 {
-            font-size: 18px;
-            margin: 0 0 10px;
-        }
-
-        .table-of-contents ul {
-            margin: 0;
-        }
-
-        .table-of-contents a {
-            color: #126a78;
-            text-decoration: none;
-        }
-
-        .table-of-contents a:hover {
+        .article-content a:hover {
             text-decoration: underline;
         }
 
-        .sidebar-card {
-            padding: 24px;
-            margin-bottom: 20px;
+        .toc a {
+            display: block;
+            padding: 0.4rem 0;
+            color: #0e7490;
         }
 
-        .sidebar-card h3 {
-            color: var(--navy);
-            margin-bottom: 12px;
-            font-size: 19px;
-        }
-
-        .sidebar-card p {
-            color: var(--muted);
-            font-size: 14px;
-            margin-bottom: 16px;
-        }
-
-        .sidebar-card ul {
-            padding-left: 19px;
-            font-size: 14px;
-        }
-
-        .sidebar-card li {
-            margin-bottom: 8px;
-        }
-
-        .cta {
-            margin-top: 34px;
-            padding: 28px;
-            border-radius: 12px;
-            background: var(--navy-light);
-            color: var(--white);
-        }
-
-        .cta h2 {
-            color: var(--white);
-            margin-top: 0;
-        }
-
-        .cta p {
-            color: #d4e0e9;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 20px;
-            background: var(--teal);
-            color: var(--navy);
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 7px;
-            margin: 8px 8px 0 0;
-            overflow-wrap: anywhere;
-            transition: opacity 0.2s ease;
-        }
-
-        .button:hover {
-            opacity: 0.85;
-        }
-
-        .button.secondary {
-            background: transparent;
-            color: var(--white);
-            border: 1px solid #7c9aaa;
-        }
-
-        .faq-item {
-            padding: 17px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .faq-item h3 {
-            color: var(--navy);
-            font-size: 17px;
-            margin-bottom: 8px;
-        }
-
-        .faq-item p {
-            margin-bottom: 0;
-        }
-
-        footer {
-            margin-top: 60px;
-            background: var(--navy);
-            color: #d0dce6;
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 13px;
-        }
-
-        footer a {
-            color: var(--teal);
-            text-decoration: none;
-        }
-
-        @media (max-width: 800px) {
-            .page-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .sidebar {
-                order: -1;
-            }
-
-            article {
-                padding: 25px 21px;
-            }
-
-            .navbar {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .nav-links {
-                gap: 15px;
-            }
-
-            .hero {
-                padding: 52px 22px;
-            }
-        }
-
-        @media (max-width: 420px) {
-            .brand img {
-                width: 48px;
-                height: 48px;
-            }
-
-            .brand-text strong {
-                font-size: 21px;
-            }
-
-            .nav-links {
-                gap: 12px;
-            }
-
-            .hero h1 {
-                font-size: 32px;
-            }
+        .toc a:hover {
+            text-decoration: underline;
         }
     </style>
 
@@ -408,442 +104,503 @@
       "description": "Learn why data cleaning matters for business reporting and when to consider professional data cleaning and validation services.",
       "author": {
         "@type": "Organization",
-        "name": "DSTA Solutions",
-        "url": "https://dstasolutions.com/"
+        "name": "DSTA Solutions"
       },
       "publisher": {
         "@type": "Organization",
         "name": "DSTA Solutions",
-        "url": "https://dstasolutions.com/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://dstasolutions.com/images/logo.png"
-        }
+        "url": "https://dstasolutions.com/"
       },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://dstasolutions.com/data-cleaning-services.html"
-      }
+      "mainEntityOfPage": "https://dstasolutions.com/data-cleaning-services.html"
     }
     </script>
 </head>
 
-<body>
+<body class="bg-white text-gray-800">
 
-<div class="top-bar"></div>
+<!-- NAVIGATION: MATCHES THE EXISTING DSTA WEBSITE -->
 
-<header>
-    <nav class="navbar">
+<nav class="sticky top-0 bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-8 py-4">
 
-        <a class="brand" href="index.html" aria-label="DSTA Solutions home">
+        <a href="index.html#home" aria-label="DSTA Solutions homepage">
             <img src="images/logo.png"
-                 alt="DSTA Solutions logo"
-                 width="58"
-                 height="58">
-
-            <div class="brand-text">
-                <strong>DSTA</strong>
-                <span>SOLUTIONS</span>
-            </div>
+                 class="h-14 md:h-20 w-auto"
+                 alt="DSTA Solutions Logo">
         </a>
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="index.html#services">Services</a>
-            <a href="index.html#portfolio">Portfolio</a>
-            <a href="#article">Blog</a>
-            <a href="#contact">Contact</a>
+        <div class="hidden md:flex gap-6 lg:gap-8 font-medium text-sm lg:text-base">
+            <a href="index.html#home" class="hover:text-cyan-600">Home</a>
+            <a href="index.html#about" class="hover:text-cyan-600">About</a>
+            <a href="index.html#services" class="hover:text-cyan-600">Services</a>
+            <a href="index.html#portfolio" class="hover:text-cyan-600">Portfolio</a>
+            <a href="index.html#resources" class="hover:text-cyan-600">Free Resources</a>
+            <a href="index.html#blog" class="text-cyan-600 font-semibold">Blog</a>
+            <a href="index.html#contact" class="hover:text-cyan-600">Contact</a>
         </div>
 
-    </nav>
-</header>
+        <a href="mailto:official.dstasolutions@gmail.com"
+           class="md:hidden bg-cyan-500 text-white px-4 py-2 rounded-lg text-sm">
+            Contact
+        </a>
 
-<section class="hero">
-    <div class="hero-content">
+    </div>
+</nav>
 
-        <span class="eyebrow">Data Management &amp; Reporting</span>
+<!-- BLOG HERO -->
 
-        <h1>
+<section class="bg-white border-b border-gray-100">
+    <div class="max-w-5xl mx-auto px-6 md:px-8 py-16 md:py-20">
+
+        <p class="uppercase tracking-widest text-cyan-600 font-semibold text-sm mb-4">
+            Data Management • Reporting • Business Intelligence
+        </p>
+
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight text-slate-900">
             Data Cleaning: Why Clean Data Matters for Better Business Decisions
         </h1>
 
-        <p>
+        <p class="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed max-w-4xl">
             Reliable business decisions begin with reliable data.
             Discover how common data quality issues affect reporting,
-            operational visibility, and the information businesses
-            use every day.
+            operational visibility, and everyday business decisions.
         </p>
 
-        <div class="article-meta">
-            By DSTA Solutions
-            &nbsp;|&nbsp;
-            Business Data &amp; Reporting
-            &nbsp;|&nbsp;
-            5–7 minute read
+        <div class="mt-6 text-sm text-gray-500">
+            By DSTA Solutions &nbsp;|&nbsp; Data Management &amp; Reporting
+            &nbsp;|&nbsp; 5–7 minute read
         </div>
 
     </div>
 </section>
 
-<main class="page-layout">
+<!-- MAIN BLOG CONTENT -->
 
-    <article id="article">
+<main class="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-16">
 
-        <div class="table-of-contents">
+    <div class="grid lg:grid-cols-3 gap-10 lg:gap-12">
 
-            <h2>In This Article</h2>
+        <!-- ARTICLE -->
+
+        <article class="article-content lg:col-span-2 min-w-0">
+
+            <p>
+                Businesses use data to track sales, manage inventory,
+                maintain customer records, monitor employee information,
+                and understand daily operations. But this data does not
+                always arrive in a consistent, complete, or ready-to-use format.
+            </p>
+
+            <p>
+                Duplicate records, missing values, inconsistent formats,
+                and information spread across multiple files can make
+                reporting slower and less reliable. This is where
+                <strong>data cleaning</strong> becomes important.
+            </p>
+
+            <p>
+                Whether a business relies on Excel spreadsheets,
+                management reports, or dashboards, improving data quality
+                can help create a more dependable foundation for everyday decisions.
+            </p>
+
+            <!-- TABLE OF CONTENTS -->
+
+            <div class="toc bg-cyan-50 border-l-4 border-cyan-500 rounded-xl p-6 my-10">
+
+                <h2 class="!mt-0 !text-xl">In This Article</h2>
+
+                <a href="#what-is-data-cleaning">1. What Is Data Cleaning?</a>
+                <a href="#importance">2. Why Data Cleaning Matters</a>
+                <a href="#common-problems">3. Common Data Quality Problems</a>
+                <a href="#professional-support">4. When to Consider Professional Support</a>
+                <a href="#choosing-service">5. Choosing a Data Cleaning Service</a>
+                <a href="#dsta-support">6. How DSTA Solutions Can Help</a>
+                <a href="#faqs">7. Frequently Asked Questions</a>
+
+            </div>
+
+            <h2 id="what-is-data-cleaning">What Is Data Cleaning?</h2>
+
+            <p>
+                Data cleaning is the process of identifying and addressing
+                issues that affect the quality, consistency, and usability
+                of a dataset. It may involve reviewing duplicates,
+                identifying missing information, standardizing formats,
+                checking values, and flagging inconsistencies for review.
+            </p>
+
+            <p>
+                The objective is not simply to make a spreadsheet look tidy.
+                It is to make sure the information is suitable for its
+                intended business use while preserving the meaning of the
+                original data.
+            </p>
+
+            <h2 id="importance">Why Is Data Cleaning Important for Businesses?</h2>
+
+            <h3 class="text-lg font-bold text-slate-800 mt-6 mb-2">
+                1. More dependable reports
+            </h3>
+
+            <p>
+                Inconsistent or duplicate records can distort totals and
+                summaries. Better data quality helps teams prepare reports
+                they can review with greater confidence.
+            </p>
+
+            <h3 class="text-lg font-bold text-slate-800 mt-6 mb-2">
+                2. Less time spent correcting spreadsheets
+            </h3>
+
+            <p>
+                When the same data issues appear repeatedly, employees may
+                spend valuable time fixing files before they can begin
+                their actual analysis or reporting work.
+            </p>
+
+            <h3 class="text-lg font-bold text-slate-800 mt-6 mb-2">
+                3. Better operational visibility
+            </h3>
+
+            <p>
+                Consistent data can make it easier to compare performance
+                across reporting periods, teams, products, or locations.
+            </p>
+
+            <h3 class="text-lg font-bold text-slate-800 mt-6 mb-2">
+                4. A stronger foundation for dashboards and automation
+            </h3>
+
+            <p>
+                Dashboards and automated reports depend on suitable input
+                data. Addressing quality issues early can reduce avoidable
+                errors in downstream reporting processes.
+            </p>
+
+            <h2 id="common-problems">Common Data Quality Problems</h2>
+
+            <p>
+                Businesses frequently encounter data quality issues such as:
+            </p>
 
             <ul>
-                <li><a href="#what-is-data-cleaning">What is data cleaning?</a></li>
-                <li><a href="#why-it-matters">Why data quality matters</a></li>
-                <li><a href="#common-problems">Common data quality problems</a></li>
-                <li><a href="#when-to-get-help">When to consider professional support</a></li>
-                <li><a href="#choosing-service">Choosing a data cleaning service</a></li>
-                <li><a href="#dsta-support">How DSTA Solutions can help</a></li>
-                <li><a href="#faqs">Frequently asked questions</a></li>
+                <li>
+                    <strong>Duplicate records:</strong>
+                    The same customer, transaction, or item appears more than once.
+                </li>
+
+                <li>
+                    <strong>Missing information:</strong>
+                    Important fields are blank or incomplete.
+                </li>
+
+                <li>
+                    <strong>Inconsistent formats:</strong>
+                    Dates, names, categories, or identifiers are recorded differently.
+                </li>
+
+                <li>
+                    <strong>Unexpected values:</strong>
+                    Entries do not match expected ranges or business rules.
+                </li>
+
+                <li>
+                    <strong>Scattered data:</strong>
+                    Relevant information is distributed across several spreadsheets or files.
+                </li>
+
+                <li>
+                    <strong>Inconsistent reporting definitions:</strong>
+                    Different teams calculate or classify the same metric differently.
+                </li>
             </ul>
 
-        </div>
-
-        <p>
-            Businesses use data to track sales, manage inventory, maintain
-            customer records, monitor employee information, and understand
-            daily operations. But this data does not always arrive in a
-            consistent, complete, or ready-to-use format.
-        </p>
-
-        <p>
-            Duplicate records, missing values, inconsistent formats, and
-            information spread across multiple files can make reporting
-            slower and less reliable. This is where
-            <strong>data cleaning</strong> becomes important.
-        </p>
-
-        <p>
-            Whether a business relies on Excel spreadsheets, management
-            reports, or dashboards, improving data quality can help create
-            a more dependable foundation for everyday decisions.
-        </p>
-
-        <h2 id="what-is-data-cleaning">What Is Data Cleaning?</h2>
-
-        <p>
-            Data cleaning is the process of identifying and addressing
-            issues that affect the quality, consistency, and usability
-            of a dataset. The work may involve reviewing duplicates,
-            identifying missing information, standardizing formats,
-            checking values, and flagging inconsistencies for review.
-        </p>
-
-        <p>
-            The objective is not simply to make a spreadsheet look tidy.
-            It is to make sure the information is suitable for its
-            intended business use, while preserving the meaning of
-            the original data.
-        </p>
-
-        <h2 id="why-it-matters">
-            Why Is Data Cleaning Important for Businesses?
-        </h2>
-
-        <p><strong>1. More dependable reports</strong></p>
-
-        <p>
-            Inconsistent or duplicate records can distort totals and
-            summaries. Better data quality helps teams prepare reports
-            they can review with greater confidence.
-        </p>
-
-        <p><strong>2. Less time spent correcting spreadsheets</strong></p>
-
-        <p>
-            When the same data issues appear repeatedly, employees may
-            spend valuable time fixing files before they can begin their
-            actual analysis or reporting work.
-        </p>
-
-        <p><strong>3. Better visibility into operations</strong></p>
-
-        <p>
-            Consistent data can make it easier to compare performance
-            across reporting periods, teams, products, or locations.
-        </p>
-
-        <p><strong>4. A stronger foundation for dashboards and automation</strong></p>
-
-        <p>
-            Dashboards and automated reports depend on suitable input
-            data. Addressing quality issues early can reduce avoidable
-            errors in downstream reporting processes.
-        </p>
-
-        <h2 id="common-problems">Common Data Quality Problems</h2>
-
-        <p>
-            Businesses frequently encounter issues such as:
-        </p>
-
-        <ul>
-            <li>
-                <strong>Duplicate records:</strong>
-                The same customer, transaction, or item appears more than once.
-            </li>
-            <li>
-                <strong>Missing information:</strong>
-                Important fields are blank or incomplete.
-            </li>
-            <li>
-                <strong>Inconsistent formats:</strong>
-                Dates, names, categories, or identifiers are recorded differently.
-            </li>
-            <li>
-                <strong>Unexpected values:</strong>
-                Entries do not match the expected range or business rules.
-            </li>
-            <li>
-                <strong>Scattered data:</strong>
-                Relevant information is distributed across several spreadsheets or files.
-            </li>
-            <li>
-                <strong>Unclear reporting definitions:</strong>
-                Different teams calculate or classify the same metric differently.
-            </li>
-        </ul>
-
-        <p>
-            The right approach depends on the data, the business rules,
-            and the purpose of the report. Not every unusual value is
-            an error, so changes should be reviewed carefully rather
-            than made automatically without context.
-        </p>
-
-        <h2 id="when-to-get-help">
-            When Should a Business Consider Professional Data Cleaning Services?
-        </h2>
-
-        <p>
-            External support may be worth considering when:
-        </p>
-
-        <ul>
-            <li>Your team regularly combines data from multiple files or sources.</li>
-            <li>Recurring reports require extensive manual corrections.</li>
-            <li>Spreadsheet errors keep returning despite repeated fixes.</li>
-            <li>Data preparation delays dashboards or management reporting.</li>
-            <li>Your team needs a clearly documented process for validation and reporting.</li>
-            <li>Internal staff do not have enough time to handle recurring data tasks.</li>
-        </ul>
-
-        <p>
-            The scope does not need to be large. A clearly defined pilot,
-            such as reviewing one recurring report or consolidating a
-            limited set of spreadsheets, can help a business assess the
-            value of external support before committing to a wider project.
-        </p>
-
-        <h2 id="choosing-service">
-            What Should You Look for in a Data Cleaning Service?
-        </h2>
-
-        <p>
-            Before selecting a provider, consider the following:
-        </p>
-
-        <ul>
-            <li>
-                <strong>Validation:</strong>
-                Are checks aligned with your business rules and reporting requirements?
-            </li>
-            <li>
-                <strong>Clear deliverables:</strong>
-                Will you receive a defined output and a summary of issues identified?
-            </li>
-            <li>
-                <strong>Business context:</strong>
-                Does the provider understand how the cleaned data will be used?
-            </li>
-            <li>
-                <strong>Repeatability:</strong>
-                Can recurring work follow a consistent process?
-            </li>
-            <li>
-                <strong>Confidentiality:</strong>
-                Are data access, transfer, storage, and handling responsibilities agreed in advance?
-            </li>
-        </ul>
-
-        <p>
-            A good process should make it clear what was changed, what
-            remains uncertain, and which issues require the client's
-            confirmation. Sensitive business data should only be shared
-            through an agreed and appropriate channel.
-        </p>
-
-        <h2 id="dsta-support">
-            How DSTA Solutions Supports Businesses
-        </h2>
-
-        <p>
-            <strong>DSTA Solutions</strong> helps businesses organize
-            data and improve their reporting workflows through practical,
-            spreadsheet-focused support.
-        </p>
-
-        <ul>
-            <li>Data cleaning and validation</li>
-            <li>Excel reporting and MIS reports</li>
-            <li>Data consolidation across files</li>
-            <li>Excel dashboards and management reporting</li>
-            <li>Reporting process improvement and automation support</li>
-            <li>Back-office and operational data support</li>
-        </ul>
-
-        <p>
-            Every project begins with understanding the task, the expected
-            output, and the checks needed to make the data useful. The
-            scope can then be defined around the business's reporting needs.
-        </p>
-
-        <h2 id="faqs">Frequently Asked Questions</h2>
-
-        <div class="faq-item">
-            <h3>What is data cleaning in Excel?</h3>
-
             <p>
-                It means reviewing spreadsheet data for issues such as
-                duplicates, missing values, inconsistent formats, and
-                entries that do not meet agreed validation rules.
-            </p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Why is data cleaning important for MIS reporting?</h3>
-
-            <p>
-                MIS reports summarize business performance. Better input
-                data can help reduce avoidable inconsistencies and make
-                reports more dependable for review.
-            </p>
-        </div>
-
-        <div class="faq-item">
-            <h3>What is the difference between data cleaning and data validation?</h3>
-
-            <p>
-                Data cleaning addresses identified data quality issues.
-                Data validation checks whether information meets specified
-                rules or requirements. They are often used together.
-            </p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Can DSTA Solutions help with Excel reporting?</h3>
-
-            <p>
-                DSTA Solutions offers support for data cleaning, data
-                consolidation, Excel dashboards, MIS reporting, and
-                reporting-related workflows. Contact us to discuss your
-                specific requirements and confirm the appropriate scope.
-            </p>
-        </div>
-
-        <section class="cta" id="contact">
-
-            <h2>Turn Your Data Into a More Reliable Business Resource</h2>
-
-            <p>
-                Spending too much time preparing spreadsheets or correcting
-                recurring report errors? Tell us about your reporting
-                process and the outcome you need.
+                The right approach depends on the data, business rules,
+                and purpose of the report. Not every unusual value is an
+                error, so changes should be reviewed carefully rather than
+                made automatically without context.
             </p>
 
-            <a class="button"
-               href="mailto:official.dstasolutions@gmail.com?subject=Data%20Cleaning%20and%20Reporting%20Support">
-                Discuss Your Requirements
-            </a>
+            <h2 id="professional-support">
+                When Should a Business Consider Professional Data Cleaning Services?
+            </h2>
 
-            <a class="button secondary" href="index.html">
-                Explore DSTA Solutions
-            </a>
+            <p>
+                Professional data cleaning and validation support may be
+                worth considering when:
+            </p>
 
-            <p style="margin-top:18px; margin-bottom:0;">
-                Email:
-                <a href="mailto:official.dstasolutions@gmail.com"
-                   style="color:#46c7f4;">
-                    official.dstasolutions@gmail.com
+            <ul>
+                <li>Your team regularly combines data from multiple files or sources.</li>
+                <li>Recurring reports require extensive manual corrections.</li>
+                <li>Spreadsheet errors keep returning despite repeated fixes.</li>
+                <li>Data preparation delays dashboards or management reporting.</li>
+                <li>Your team needs a consistent process for validation and reporting.</li>
+                <li>Internal staff do not have enough time to handle recurring data tasks.</li>
+            </ul>
+
+            <p>
+                The scope does not need to be large. A clearly defined
+                pilot, such as reviewing one recurring report or
+                consolidating a limited set of spreadsheets, can help
+                a business assess the value of external support.
+            </p>
+
+            <h2 id="choosing-service">
+                What Should You Look for in a Data Cleaning Service?
+            </h2>
+
+            <p>Before selecting a provider, consider the following:</p>
+
+            <ul>
+                <li>
+                    <strong>Validation:</strong>
+                    Are checks aligned with your business rules and reporting requirements?
+                </li>
+
+                <li>
+                    <strong>Clear deliverables:</strong>
+                    Will you receive a defined output and a summary of issues identified?
+                </li>
+
+                <li>
+                    <strong>Business context:</strong>
+                    Does the provider understand how the cleaned data will be used?
+                </li>
+
+                <li>
+                    <strong>Repeatability:</strong>
+                    Can recurring work follow a consistent process?
+                </li>
+
+                <li>
+                    <strong>Confidentiality:</strong>
+                    Are data access, transfer, storage, and handling responsibilities agreed in advance?
+                </li>
+            </ul>
+
+            <p>
+                A good process should make it clear what was changed,
+                what remains uncertain, and which issues require the
+                client's confirmation. Sensitive business data should
+                only be shared through an agreed and appropriate channel.
+            </p>
+
+            <h2 id="dsta-support">How DSTA Solutions Supports Businesses</h2>
+
+            <p>
+                <strong>DSTA Solutions</strong> helps businesses organize
+                data and improve their reporting workflows through practical,
+                spreadsheet-focused support.
+            </p>
+
+            <ul>
+                <li>Data cleaning and validation</li>
+                <li>Excel reporting and MIS reports</li>
+                <li>Data consolidation across files</li>
+                <li>Excel dashboards and management reporting</li>
+                <li>Reporting process improvement and automation support</li>
+                <li>Back-office and operational data support</li>
+            </ul>
+
+            <p>
+                Every project begins with understanding the task, the
+                expected output, and the checks needed to make the data
+                useful. The scope can then be defined around the
+                business's reporting needs.
+            </p>
+
+            <h2 id="faqs">Frequently Asked Questions</h2>
+
+            <div class="border-b border-gray-200 py-5">
+                <h3 class="font-bold text-lg text-slate-800 mb-2">
+                    What is data cleaning in Excel?
+                </h3>
+
+                <p>
+                    It means reviewing spreadsheet data for issues such
+                    as duplicates, missing values, inconsistent formats,
+                    and entries that do not meet agreed validation rules.
+                </p>
+            </div>
+
+            <div class="border-b border-gray-200 py-5">
+                <h3 class="font-bold text-lg text-slate-800 mb-2">
+                    Why is data cleaning important for MIS reporting?
+                </h3>
+
+                <p>
+                    MIS reports summarize business performance. Better
+                    input data can help reduce avoidable inconsistencies
+                    and make reports more dependable for review.
+                </p>
+            </div>
+
+            <div class="border-b border-gray-200 py-5">
+                <h3 class="font-bold text-lg text-slate-800 mb-2">
+                    What is the difference between data cleaning and validation?
+                </h3>
+
+                <p>
+                    Data cleaning addresses identified data quality
+                    issues. Data validation checks whether information
+                    meets specified rules or requirements. They are
+                    often used together.
+                </p>
+            </div>
+
+            <div class="border-b border-gray-200 py-5">
+                <h3 class="font-bold text-lg text-slate-800 mb-2">
+                    Can DSTA Solutions help with Excel reporting?
+                </h3>
+
+                <p>
+                    DSTA Solutions offers support for data cleaning,
+                    data consolidation, Excel dashboards, MIS reporting,
+                    and reporting-related workflows. Contact us to
+                    discuss your requirements and confirm the appropriate scope.
+                </p>
+            </div>
+
+            <!-- CALL TO ACTION -->
+
+            <section id="contact"
+                     class="mt-12 bg-slate-900 text-white rounded-2xl p-7 md:p-10">
+
+                <p class="uppercase tracking-widest text-cyan-400 font-semibold text-sm mb-3">
+                    DSTA Solutions
+                </p>
+
+                <h2 class="!mt-0 !text-white text-2xl md:text-3xl">
+                    Turn Your Data Into a More Reliable Business Resource
+                </h2>
+
+                <p class="!text-gray-300 mt-4">
+                    Spending too much time preparing spreadsheets or
+                    correcting recurring report errors? Tell us about
+                    your reporting process and the outcome you need.
+                </p>
+
+                <div class="flex flex-wrap gap-4 mt-6">
+
+                    <a href="mailto:official.dstasolutions@gmail.com?subject=Data%20Cleaning%20and%20Reporting%20Support"
+                       class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-xl font-semibold">
+                        Discuss Your Requirements
+                    </a>
+
+                    <a href="index.html"
+                       class="inline-block border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-500 hover:text-white px-6 py-3 rounded-xl font-semibold">
+                        Visit Homepage
+                    </a>
+
+                </div>
+
+                <p class="!text-gray-300 text-sm mt-6 mb-0">
+                    Email:
+                    <a href="mailto:official.dstasolutions@gmail.com"
+                       class="!text-cyan-400">
+                        official.dstasolutions@gmail.com
+                    </a>
+                </p>
+
+            </section>
+
+        </article>
+
+        <!-- SIDEBAR -->
+
+        <aside class="lg:col-span-1">
+
+            <div class="border border-gray-200 rounded-2xl p-6 mb-6 shadow-sm">
+
+                <img src="images/logo.png"
+                     alt="DSTA Solutions"
+                     class="h-14 w-auto mb-5">
+
+                <h2 class="text-xl font-bold text-slate-900">
+                    About DSTA Solutions
+                </h2>
+
+                <p class="text-gray-600 mt-3 leading-relaxed">
+                    Data and reporting support for businesses looking
+                    to improve spreadsheet workflows, reporting
+                    consistency, and operational visibility.
+                </p>
+
+                <a href="index.html#services"
+                   class="inline-block mt-5 bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-3 rounded-xl font-medium">
+                    Explore Our Services
                 </a>
-            </p>
 
-        </section>
+            </div>
 
-    </article>
+            <div class="border border-gray-200 rounded-2xl p-6 mb-6">
 
-    <aside class="sidebar">
+                <h2 class="text-xl font-bold text-slate-900 mb-4">
+                    Our Services
+                </h2>
 
-        <div class="sidebar-card">
-            <h3>About DSTA Solutions</h3>
+                <ul class="space-y-3 text-gray-600">
+                    <li>Data Cleaning &amp; Validation</li>
+                    <li>Excel &amp; MIS Reporting</li>
+                    <li>Business Dashboards</li>
+                    <li>Data Consolidation</li>
+                    <li>Reporting Automation</li>
+                    <li>Operational Support</li>
+                </ul>
 
-            <p>
-                Data and reporting support for businesses looking to
-                improve spreadsheet workflows, reporting consistency,
-                and operational visibility.
-            </p>
+            </div>
 
-            <a class="button" href="index.html">Visit Homepage</a>
-        </div>
+            <div class="bg-cyan-50 border border-cyan-100 rounded-2xl p-6">
 
-        <div class="sidebar-card">
-            <h3>Our Services</h3>
+                <h2 class="text-xl font-bold text-slate-900">
+                    Have a Reporting Challenge?
+                </h2>
 
-            <ul>
-                <li>Data Cleaning &amp; Validation</li>
-                <li>Excel &amp; MIS Reporting</li>
-                <li>Business Dashboards</li>
-                <li>Data Consolidation</li>
-                <li>Reporting Automation</li>
-                <li>Operations Support</li>
-            </ul>
-        </div>
+                <p class="text-gray-600 mt-3">
+                    Share the recurring data or reporting task your
+                    team wants to improve.
+                </p>
 
-        <div class="sidebar-card">
-            <h3>Have a Reporting Challenge?</h3>
+                <a href="mailto:official.dstasolutions@gmail.com"
+                   class="inline-block mt-4 text-cyan-700 font-semibold">
+                    Contact DSTA Solutions →
+                </a>
 
-            <p>
-                Share the recurring data or reporting task your team
-                wants to improve.
-            </p>
+            </div>
 
-            <a href="mailto:official.dstasolutions@gmail.com"
-               style="color:#087e88; font-weight:bold;">
-                Contact DSTA Solutions →
-            </a>
-        </div>
+        </aside>
 
-    </aside>
+    </div>
 
 </main>
 
-<footer>
+<!-- FOOTER: MATCHES THE EXISTING DSTA WEBSITE -->
 
-    <p>
-        &copy; <span id="year"></span> DSTA Solutions.
-        Data Solutions for Smarter Business.
+<footer class="bg-slate-900 text-white text-center py-8 px-6">
+
+    <p class="text-sm">
+        © 2026 DSTA Solutions • Building Trust Through Data
     </p>
 
-    <p style="margin-top:8px;">
-        <a href="index.html">Home</a>
-        &nbsp;|&nbsp;
-        <a href="index.html#services">Services</a>
-        &nbsp;|&nbsp;
-        <a href="mailto:official.dstasolutions@gmail.com">Contact</a>
-    </p>
+    <div class="flex flex-wrap justify-center gap-5 mt-4 text-sm">
+
+        <a href="index.html#home" class="hover:text-cyan-400">Home</a>
+
+        <a href="index.html#services" class="hover:text-cyan-400">Services</a>
+
+        <a href="index.html#portfolio" class="hover:text-cyan-400">Portfolio</a>
+
+        <a href="index.html#resources" class="hover:text-cyan-400">Free Resources</a>
+
+        <a href="mailto:official.dstasolutions@gmail.com"
+           class="hover:text-cyan-400">Contact</a>
+
+    </div>
 
 </footer>
-
-<script>
-    document.getElementById("year").textContent =
-        new Date().getFullYear();
-</script>
 
 </body>
 </html>
