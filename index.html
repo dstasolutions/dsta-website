@@ -16,10 +16,14 @@ body{font-family:'Poppins',sans-serif;scroll-behavior:smooth}
 <nav class="sticky top-0 bg-white shadow z-50">
 <div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
 <img src="images/logo.png" class="h-20 w-auto" alt="DSTA Logo">
-<div class="hidden md:flex gap-8 font-medium">
+<button id="menu-btn" class="md:hidden text-gray-800 text-3xl" aria-label="Open navigation menu" aria-expanded="false">
+    ☰
+</button>
+<div id="nav-menu" class="hidden md:flex gap-8 font-medium">
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
+<a href="#why-dsta">Why DSTA</a>
 <a href="#portfolio">Portfolio</a>
 <a href="#resources">Free Resources</a>
 <a href="data-cleaning-services.html">Blog</a>
@@ -31,9 +35,16 @@ body{font-family:'Poppins',sans-serif;scroll-behavior:smooth}
 
 <section id="home" class="max-w-7xl mx-auto px-8 py-20 grid lg:grid-cols-2 gap-12 items-center">
 <div>
-<p class="uppercase tracking-widest text-cyan-600 font-semibold">Business Intelligence • Reporting • Automation</p>
-<h1 class="text-5xl font-extrabold mt-4">Transforming Business Data Into Smarter Decisions.</h1>
-<p class="mt-6 text-lg text-gray-600">Helping businesses transform raw data into meaningful insights through dashboards, reporting, automation and operational support.</p>
+<p class="uppercase tracking-widest text-cyan-600 font-semibold">
+AI-Enabled Data Operations • Business Intelligence • Automation
+</p>
+<p class="text-cyan-600 font-semibold text-lg mt-3 tracking-wide">
+Data Solutions for Smarter Business.
+</p>
+
+<p class="mt-6 text-lg text-gray-600">
+DSTA Solutions helps businesses manage, clean, validate and analyse their data through structured reporting, business intelligence and process automation.
+</p>
 <div class="mt-8 flex gap-4">
 <a href="#portfolio" class="bg-cyan-500 text-white px-6 py-3 rounded-xl hover:bg-cyan-600">View Portfolio</a>
 <a href="mailto:official@dstasolutions.com" class="border-2 border-cyan-500 text-cyan-600 px-6 py-3 rounded-xl hover:bg-cyan-500 hover:text-white">Get In Touch</a>
@@ -47,7 +58,9 @@ body{font-family:'Poppins',sans-serif;scroll-behavior:smooth}
 <section id="about" class="bg-gray-50 py-20">
 <div class="max-w-6xl mx-auto px-8">
 <h2 class="text-4xl font-bold">About DSTA</h2>
-<p class="mt-6 text-gray-600 text-lg">DSTA Solutions helps businesses with dashboard development, reporting, automation, data cleaning and business process support.</p>
+<p class="mt-6 text-gray-600 text-lg leading-relaxed">
+DSTA Solutions is a data operations and business intelligence company helping businesses turn scattered, inconsistent data into structured and reliable business information. From data cleaning and recurring MIS reporting to dashboards, analytics and process automation, we support businesses in building better reporting workflows and making informed decisions.
+</p>
 </div>
 </section>
 
@@ -55,26 +68,135 @@ body{font-family:'Poppins',sans-serif;scroll-behavior:smooth}
 <div class="max-w-6xl mx-auto px-8">
 <h2 class="text-4xl font-bold mb-10">Our Services</h2>
 <div class="grid md:grid-cols-3 gap-6">
-<div class="shadow rounded-xl p-6">📊<h3 class="font-bold text-xl mt-3">Dashboards</h3></div>
-<div class="shadow rounded-xl p-6">📈<h3 class="font-bold text-xl mt-3">Reports</h3></div>
-<div class="shadow rounded-xl p-6">⚙️<h3 class="font-bold text-xl mt-3">Automation</h3></div>
-<div class="shadow rounded-xl p-6">🧹<h3 class="font-bold text-xl mt-3">Data Cleaning</h3></div>
-<div class="shadow rounded-xl p-6">📋<h3 class="font-bold text-xl mt-3">Operational Support</h3></div>
-<div class="shadow rounded-xl p-6">🤝<h3 class="font-bold text-xl mt-3">Dedicated Resource</h3></div>
+<div class="bg-white shadow rounded-xl p-6 border border-gray-100">
+    <h3 class="font-bold text-xl mt-3">📊 Data Operations</h3>
+    <p class="mt-3 text-gray-600">
+        Data cleaning, consolidation, validation and structured data management to keep business information organised and reliable.
+    </p>
+</div>
+
+<div class="bg-white shadow rounded-xl p-6 border border-gray-100">
+    <h3 class="font-bold text-xl mt-3">📈 MIS & Reporting</h3>
+    <p class="mt-3 text-gray-600">
+        Daily, weekly and monthly business reports, KPI tracking, sales analysis and management reporting to support better decisions.
+    </p>
+</div>
+
+<div class="bg-white shadow rounded-xl p-6 border border-gray-100">
+    <h3 class="font-bold text-xl mt-3">📉 Business Intelligence & Dashboards</h3>
+    <p class="mt-3 text-gray-600">
+        Interactive dashboards, business performance analysis and visual reporting using tools such as Excel and Power BI.
+    </p>
+</div>
+
+<div class="bg-white shadow rounded-xl p-6 border border-gray-100">
+    <h3 class="font-bold text-xl mt-3">⚙️ Reporting Process Automation</h3>
+    <p class="mt-3 text-gray-600">
+        Streamlining repetitive reporting tasks and improving reporting workflows through Excel, Power Query and other suitable tools.
+    </p>
+</div>
+
+<div class="bg-white shadow rounded-xl p-6 border border-gray-100">
+    <h3 class="font-bold text-xl mt-3">🧹 Data Cleaning & Validation</h3>
+    <p class="mt-3 text-gray-600">
+        Identifying duplicates, missing values, inconsistencies and formatting issues to prepare data for dependable analysis.
+    </p>
+</div>
+
+<div class="bg-white shadow rounded-xl p-6 border border-gray-100">
+    <h3 class="font-bold text-xl mt-3">👥 Dedicated Resource</h3>
+    <p class="mt-3 text-gray-600">
+        Dedicated or shared data and reporting professionals for recurring business operations, MIS preparation and ongoing reporting requirements, based on agreed scope and availability.
+    </p>
 </div>
 </div>
 </section>
+<section id="why-dsta" class="bg-slate-900 text-white py-20">
+    <div class="max-w-6xl mx-auto px-8">
 
+        <div class="text-center mb-12">
+            <p class="uppercase tracking-widest text-cyan-400 font-semibold">
+                The DSTA Approach
+            </p>
+            <h2 class="text-4xl font-bold mt-3">
+                Why Choose DSTA Solutions?
+            </h2>
+            <p class="mt-5 text-gray-300 text-lg max-w-3xl mx-auto">
+                Reliable business reporting requires more than generating dashboards.
+                It requires organised data, consistent processes and attention to detail.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="bg-slate-800 p-6 rounded-xl">
+                <h3 class="text-xl font-bold text-cyan-400">
+                    Structured Data Management
+                </h3>
+                <p class="mt-3 text-gray-300">
+                    We organise, clean and validate business data before it moves into reporting and analysis.
+                </p>
+            </div>
+
+            <div class="bg-slate-800 p-6 rounded-xl">
+                <h3 class="text-xl font-bold text-cyan-400">
+                    Business-Focused Reporting
+                </h3>
+                <p class="mt-3 text-gray-300">
+                    Reports and dashboards are designed around relevant business metrics and operational requirements.
+                </p>
+            </div>
+
+            <div class="bg-slate-800 p-6 rounded-xl">
+                <h3 class="text-xl font-bold text-cyan-400">
+                    Quality Checks & Human Review
+                </h3>
+                <p class="mt-3 text-gray-300">
+                    Reporting workflows include validation checks and review to identify inconsistencies before delivery.
+                </p>
+            </div>
+
+            <div class="bg-slate-800 p-6 rounded-xl">
+                <h3 class="text-xl font-bold text-cyan-400">
+                    Flexible Engagement
+                </h3>
+                <p class="mt-3 text-gray-300">
+                    Choose project-based support, recurring reporting services or dedicated resource arrangements.
+                </p>
+            </div>
+
+            <div class="bg-slate-800 p-6 rounded-xl">
+                <h3 class="text-xl font-bold text-cyan-400">
+                    Process-Driven Approach
+                </h3>
+                <p class="mt-3 text-gray-300">
+                    We follow a structured workflow to make data preparation and reporting more consistent and organised.
+                </p>
+            </div>
+
+            <div class="bg-slate-800 p-6 rounded-xl">
+                <h3 class="text-xl font-bold text-cyan-400">
+                    Clear Communication
+                </h3>
+                <p class="mt-3 text-gray-300">
+                    Defined deliverables, agreed timelines and progress updates help keep every engagement transparent.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+</section>
 <section id="portfolio" class="bg-gray-50 py-20">
 <div class="max-w-6xl mx-auto px-8">
 <h2 class="text-4xl font-bold mb-10">Portfolio</h2>
 <div class="grid lg:grid-cols-2 gap-8">
 <div class="bg-white rounded-2xl shadow overflow-hidden">
-<img src="images/sales-dashboard.png" class="w-full h-64 object-cover">
+<img src="images/sales-dashboard.png" class="w-full h-64 object-cover" alt="DSTA Solutions Sales Performance Dashboard" loading="lazy">
 <div class="p-6"><h3 class="text-2xl font-bold">Sales Dashboard</h3></div>
 </div>
 <div class="bg-white rounded-2xl shadow overflow-hidden">
-<img src="images/hr-dashboard.png" class="w-full h-64 object-cover">
+<img src="images/hr-dashboard.png" class="w-full h-64 object-cover" alt="DSTA Solutions HR Analytics Dashboard" loading="lazy">
 <div class="p-6"><h3 class="text-2xl font-bold">HR Analytics Dashboard</h3></div>
 </div>
 </div>
@@ -87,9 +209,37 @@ body{font-family:'Poppins',sans-serif;scroll-behavior:smooth}
 </div>
 </section>
 
-<section id="contact" class="py-20 text-center">
-<h2 class="text-4xl font-bold">Contact</h2>
-<p class="mt-6"><a class="text-cyan-600 text-xl" href="mailto:official@dstasolutions.com">official@dstasolutions.com</a></p>
+<section id="contact" class="bg-gray-50 py-20">
+    <div class="max-w-4xl mx-auto px-8 text-center">
+
+        <p class="uppercase tracking-widest text-cyan-600 font-semibold">
+            Let's Work Together
+        </p>
+
+        <h2 class="text-4xl font-bold mt-3">
+            Have a Data or Reporting Requirement?
+        </h2>
+
+        <p class="mt-6 text-gray-600 text-lg">
+            Whether you need a one-time data project, ongoing MIS reporting,
+            business dashboards or dedicated reporting support,
+            DSTA Solutions is ready to understand your requirements.
+        </p>
+
+        <a href="mailto:official@dstasolutions.com"
+           class="inline-block mt-8 bg-cyan-500 text-white px-8 py-3 rounded-xl hover:bg-cyan-600 font-semibold">
+            Discuss Your Requirements
+        </a>
+
+        <p class="mt-6 text-gray-600">
+            Email us:
+            <a class="text-cyan-600 font-semibold"
+               href="mailto:official@dstasolutions.com">
+                official@dstasolutions.com
+            </a>
+        </p>
+
+    </div>
 </section>
 <section id="resources" class="bg-slate-900 text-white py-20">
 <div class="max-w-6xl mx-auto px-8 text-center">
@@ -102,5 +252,27 @@ body{font-family:'Poppins',sans-serif;scroll-behavior:smooth}
 </div>
 </section>
 <footer class="bg-slate-900 text-white text-center py-6">© 2026 DSTA Solutions • Building Trust Through Data</footer>
+<script>
+const menuBtn = document.getElementById('menu-btn');
+const navMenu = document.getElementById('nav-menu');
+
+menuBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
+
+    const isOpen = !navMenu.classList.contains('hidden');
+
+    menuBtn.textContent = isOpen ? '✕' : '☰';
+    menuBtn.setAttribute('aria-expanded', isOpen);
+    menuBtn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+});
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.add('hidden');
+        menuBtn.textContent = '☰';
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', 'Open navigation menu');
+    });
+});
+</script>
 </body>
 </html>
