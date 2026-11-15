@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dstasolutions.com/sitemap.xml
+Sitemap: https://www.dstasolutions.com/sitemap.xml
